@@ -44,6 +44,9 @@ def move_slight_forward(duration=0.4):
 def stop():
     chassis.set_velocity(0, 0, 0)
 
+def stop_move():
+    chassis.set_velocity(0, 0, 0)
+
 def left():
     chassis.set_velocity(35, 110, 0)
 
@@ -92,7 +95,7 @@ def line_follow():
     elif s1 == 0 and s2 == 0 and s3 == 0 and s4 == 1:
         mini_right()
     else:
-        stop()
+        stop_move()
 
     return 'ok'
 
